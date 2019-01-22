@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>inhaal</title>
+</head>
+<body>
+<h1>amine header</h1>
+
+<form action="/formAanvraag" method="post">
+    <div>
+        <label for="student">Student:</label>
+        <input type="text"  name="student" />
+    </div>
+    <div>
+        <label for="examen">examen :</label>
+        <input type="text" name="examen" />
+    </div>
+    <div>
+        <label for="reden ">reden  :</label>
+        <input type="text" name="reden" />
+    </div>
+
+    <button type="submit">verzend</button>
+</form>
+</br>
+<div>
+        <% for(var i=0;i<ex.length;i++){%>
+            <ul>
+                    <li><span><%= ex[i].body["student"]%></span></li>
+                    <li><span><%= ex[i].body["examen"]%></span></li>
+                    <li><span><%= ex[i].body["reden"]%></span></li>
+            </ul>
+       <% }%>
+    </div>
+<br/>
+<br/>
+<br/>
+<form action="/search" method="post">
+    <div>
+        <label for="student">Student:</label>
+        <input type="text"  name="student" />
+    </div>
+    <button type="submit">verzend</button>
+</form>
+
+
+<div>
+    <h2>gevonden student</h2>
+   <!-- <p>Student: jan<%= ex.body["student%></p>
+   --></div>
+
+</body>
+</html>
